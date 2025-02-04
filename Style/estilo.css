@@ -1,12 +1,104 @@
 :root {
-
+    --font-family: Verdana, Geneva, sans-serif;
+    --gap: 10px;
+    --white-color: #f4f4f4;
+    --hover-color: #007BFF;
 }
 
 * {
     padding: 0;
-    margin:0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.Cabecera{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+body {
+    font-family: var(--font-family);
+    background-color: var(--white-color);
+}
+
+.Cabecera {
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.Cabecera_Menú {
+    display: flex;
+    gap: var(--gap);
+}
+
+.Links {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.Links:hover {
+    color: #fff;
+    background-color: var(--hover-color);
+}
+
+/* Estilos para la sección de introducción */
+.Introduccion {
+    padding: 20px;
+    text-align: center;
+}
+
+.Introduc_Titulo {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.Introduc_Parrafo {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Media Queries para pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+    .Links {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .Introduc_Titulo {
+        font-size: 1.5rem; /* Ajuste del tamaño del título */
+    }
+
+    .Introduc_Parrafo {
+        font-size: 0.9rem; /* Ajuste del tamaño del párrafo */
+    }
+}
+
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .Cabecera {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .Cabecera_Menú {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .Links {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .Introduc_Titulo {
+        font-size: 1.75rem; /* Ajuste del tamaño del título */
+    }
+
+    .Introduc_Parrafo {
+        font-size: 1rem; /* Ajuste del tamaño del párrafo */
+    }
 }
